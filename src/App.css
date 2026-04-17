@@ -1,0 +1,6 @@
+/* App-level styles (optional - prefer Tailwind utilities in JSX first)
+   Use this file only for:
+   - Complex animations
+   - Third-party library overrides
+   - Styles too verbose to express with utilities alone
+*/
