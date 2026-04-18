@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import tobyLogo from "../assets/photos/toby_logo.png";
 
 const NavBar = ({ setContactPopupShown }) => {
 	const [activeSection, setActiveSection] = useState("homePage");

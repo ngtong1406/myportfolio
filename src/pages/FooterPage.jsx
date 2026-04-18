@@ -6,7 +6,6 @@ const FooterPage = () => {
 			id="resumePage"
 			className="w-full h-max app-bg-gradient-ft flex flex-col items-center gap-1 pt-10 px-10 text-center"
 		>
-			{/* <p className="branding-logo">TOBY.</p> */}
 			<span>
 				<svg
 					id="svg"
