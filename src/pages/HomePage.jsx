@@ -58,7 +58,7 @@ const HomePage = () => {
 					<a
 						className="inline-flex items-center gap-2 text-black py-1.5 px-5 border border-black hover:text-white hover:bg-black hover:border-transparent hover:underline hover:underline-offset-2 duration-50"
 						href={tobyResume}
-						download={true}
+						download={"Nguyen_Tong_Tran_Resume.pdf"}
 						draggable={false}
 					>
 						<span>Get my resumé</span>

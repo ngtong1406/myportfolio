@@ -34,7 +34,7 @@ const ResumePage = () => {
 						<a
 							className="underline underline-offset-3 hover:text-gray-600"
 							href={resume}
-							download={true}
+							download={"Nguyen_Tong_Tran_Resume.pdf"}
 						>
 							{resumeFileName}
 						</a>
