@@ -7,8 +7,8 @@ const FooterPage = () => {
 			className="w-full h-max app-bg-gradient-ft flex flex-col gap-1 pt-20 px-20 text-center"
 		>
 			<p className="branding-logo">TOBY.</p>
-			<div className="flex items-center justify-center gap-5 font-inria-serif">
-				<div className="flex items-center justify-center gap-2">
+			<div className="inline-flex flex-wrap items-center justify-center gap-5 font-inria-serif">
+				<div className="flex max-md:basis-full items-center justify-center gap-2">
 					<svg
 						className="w-6 h-6 shrink-0"
 						xmlns="http://www.w3.org/2000/svg"
@@ -28,7 +28,7 @@ const FooterPage = () => {
 						Adelaide, SA
 					</a>
 				</div>
-				<div className="flex items-center justify-center gap-2">
+				<div className="flex max-md:basis-full items-center justify-center gap-2">
 					<svg
 						className="w-6 h-6 shrink-0"
 						xmlns="http://www.w3.org/2000/svg"
@@ -48,7 +48,7 @@ const FooterPage = () => {
 						ngtong1406@gmail.com
 					</a>
 				</div>
-				<div className="flex items-center justify-center gap-2">
+				<div className="flex max-md:basis-full items-center justify-center gap-2">
 					<svg
 						className="w-6 h-6 shrink-0"
 						xmlns="http://www.w3.org/2000/svg"
@@ -70,7 +70,7 @@ const FooterPage = () => {
 				</div>
 			</div>
 			<hr className="mt-15 border-t border-gray-300" />
-			<div className="flex justify-between items-center w-full h-20 text-start font-inria-serif">
+			<div className="inline-flex flex-wrap justify-between max-md:justify-center items-center w-full h-20 max-md:my-5 text-start font-inria-serif">
 				<p>&copy; 2026 Nguyen Tong Tran. All rights reserved.</p>
 				<div className="w-fit flex justify-between items-center gap-8">
 					<a

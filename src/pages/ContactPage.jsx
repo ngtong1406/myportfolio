@@ -8,15 +8,17 @@ const ContactPage = ({ contactPopupShown, setContactPopupShown }) => {
 	return (
 		<div
 			style={{ display: contactPopupShown ? "block" : "none" }}
-			className={
-				"fixed top-0 w-screen h-screen bg-black/50 backdrop-blur-xs duration-100 z-99 " +
-				(contactPopupShown ? "fade-in" : "fade-out")
-			}
+			className="fixed top-0 w-screen h-screen bg-black/50 backdrop-blur-xs duration-100 z-99 "
 		>
-			<div className="relative w-full h-full flex flex-col items-center justify-center">
-				<div className="grid grid-cols-2 w-3/4 h-4/5 bg-white border border-black shadow-md/30">
+			<div
+				className={
+					"relative w-full h-full flex flex-col items-center justify-center " +
+					(contactPopupShown ? "fade-in" : "")
+				}
+			>
+				<div className="lg:grid lg:grid-cols-2 max-md:grid-cols-1 w-3/4 h-4/5 bg-white border border-black shadow-md/30">
 					<form
-						className="p-7 space-y-2"
+						className="w-full h-full p-7 space-y-2 overflow-y-scroll overscroll-y-contain"
 						action="https://formspree.io/f/xojyddwg"
 						method="POST"
 					>
@@ -28,8 +30,8 @@ const ContactPage = ({ contactPopupShown, setContactPopupShown }) => {
 						<hr className="my-4 border border-gray-100" />
 
 						{/** NAME INPUT */}
-						<div className="flex flex-row flex-wrap gap-2 items-center justify-between font-inria-serif">
-							<div className="flex flex-col gap-2">
+						<div className="flex flex-row flex-wrap gap-3 items-center justify-between font-inria-serif">
+							<div className="flex flex-col grow gap-2">
 								<label htmlFor="firstNameInput">
 									First Name
 								</label>
@@ -42,7 +44,7 @@ const ContactPage = ({ contactPopupShown, setContactPopupShown }) => {
 									required
 								/>
 							</div>
-							<div className="flex flex-col gap-2">
+							<div className="flex flex-col grow gap-2">
 								<label htmlFor="secondNameInput">
 									Second Name
 								</label>
@@ -110,7 +112,7 @@ const ContactPage = ({ contactPopupShown, setContactPopupShown }) => {
 						</div>
 
 						{/** EXTERNAL LINKS */}
-						<div className="flex items-center gap-2 justify-between">
+						<div className="flex flex-wrap items-center gap-2 justify-between max-md:justify-center">
 							{/** LINKEDIN LINK */}
 							<a
 								className="inline-flex items-center gap-2 py-1.5 px-5 text-[#0a66c2] border border-[#0a66c2] hover:text-white hover:bg-[#0a66c2] hover:underline hover:underline-offset-2 duration-50"
@@ -176,7 +178,7 @@ const ContactPage = ({ contactPopupShown, setContactPopupShown }) => {
 							</a>
 						</div>
 					</form>
-					<div className="w-full h-full border-l border-black">
+					<div className="lg:block max-lg:hidden w-full h-full border-l border-black">
 						<img
 							className="w-full h-full object-cover"
 							src={keepInTouch}
@@ -187,7 +189,7 @@ const ContactPage = ({ contactPopupShown, setContactPopupShown }) => {
 				</div>
 				<div className="absolute top-5 right-5">
 					<button
-						className="flex items-center justify-center w-20 h-20 text-gray-200 duration-100 hover:text-white hover:cursor-pointer active:translate-y-0.5 active:text-gray-300"
+						className="flex items-center justify-center w-20 h-20 max-md:w-15 max-md:h-15 text-gray-200 duration-100 hover:text-white hover:cursor-pointer active:translate-y-0.5 active:text-gray-300"
 						title="Close the window"
 						type="button"
 						onClick={closeWindowOnClick}

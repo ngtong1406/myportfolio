@@ -12,7 +12,7 @@ const ResumePage = () => {
 	const [isRevealed, setIsRevealed] = useState(false);
 
 	const toggleIsRevealed = () => {
-		setIsRevealed(() => !isRevealed);
+		setIsRevealed((isRevealed) => !isRevealed);
 	};
 
 	return (
@@ -21,7 +21,7 @@ const ResumePage = () => {
 			className="w-full h-max app-bg-gradient-rm flex flex-col gap-15 p-20"
 		>
 			<h1>my resumé</h1>
-			<div className="flex items-center justify-center gap-3 font-inria-serif">
+			<div className="flex flex-wrap items-center justify-center gap-3 max-sm:space-y-4 font-inria-serif">
 				<div className="bg-white border border-black py-1.5 px-5">
 					<div className="flex flex-row gap-2 items-center">
 						<svg
@@ -43,7 +43,7 @@ const ResumePage = () => {
 				<a
 					id="resumePreview"
 					href="#resumePreview"
-					className="inline-flex items-center gap-2 text-white py-1.5 px-5 bg-black border border-transparent hover:bg-gray-700 hover:underline hover:underline-offset-3 hover:cursor-pointer focus-within:outline-0 duration-50"
+					className="scroll-mt-40 inline-flex items-center gap-2 text-white py-1.5 px-5 bg-black border border-transparent hover:bg-gray-700 hover:underline hover:underline-offset-3 hover:cursor-pointer focus-within:outline-0 duration-50"
 					draggable={false}
 					onClick={toggleIsRevealed}
 				>

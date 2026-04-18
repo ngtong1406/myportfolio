@@ -145,7 +145,7 @@ const ProjectsPage = () => {
 
 			<div className="h-fit flex justify-center">
 				<a
-					className="w-fit flex flex-row items-center justify-center gap-2 font-inria-serif duration-100 hover:underline hover:underline-offset-3 active:text-[0.9rem]"
+					className="w-fit flex flex-row items-center justify-center gap-2 font-inria-serif duration-100 max-md:underline max-md:underline-offset-3 hover:underline hover:underline-offset-3 active:text-[0.9rem]"
 					href="https://github.com/ngtong1406"
 					target="_blank"
 				>

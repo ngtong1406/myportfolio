@@ -26,7 +26,7 @@ const HomePage = () => {
 				<img
 					src={tobyPhoto}
 					alt="Toby's portfolio photo"
-					className="w-55 h-55 rounded-full object-cover object-[25%_50%] border border-black"
+					className="w-55 h-55 rounded-full object-cover object-[25%_50%] border border-black select-none"
 					draggable={false}
 				/>
 				<div className="w-max h-auto flex flex-col items-center gap-2">

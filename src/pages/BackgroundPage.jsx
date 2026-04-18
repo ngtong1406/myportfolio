@@ -7,12 +7,12 @@ const BackgroundPage = () => {
 			className="w-full h-max min-h-screen app-bg-gradient-rv flex flex-col gap-15 p-20"
 		>
 			<h1>about me</h1>
-			<div className="grid grid-cols-5 gap-5 font-inria-serif tracking-wide">
-				<div className="col-span-2 font-bold">
+			<div className="grid lg:grid-cols-5 md:grid-cols-1 gap-5 font-inria-serif tracking-wide">
+				<div className="lg:col-span-2 font-bold">
 					<p>Full-Stack Software Developer</p>
 					<p>Building clean & scalable software solutions.</p>
 				</div>
-				<div className="col-span-3">
+				<div className="lg:col-span-3">
 					<p className="mb-5">
 						My real name is{" "}
 						<span className="italic font-bold">
@@ -39,16 +39,16 @@ const BackgroundPage = () => {
 			</div>
 
 			<h1>my education</h1>
-			<div className="grid grid-cols-5 gap-8 font-inria-serif tracking-wide">
-				<div className="col-span-2">
+			<div className="grid lg:grid-cols-5 md:grid-cols-1 gap-8 font-inria-serif tracking-wide">
+				<div className="lg:col-span-2">
 					<p className="italic font-bold">Mar. 2023 - Nov. 2025</p>
 					<p className="italic">Mawson Lakes, SA (Australia)</p>
 				</div>
-				<div className="col-span-3">
-					<p className="flex flex-row items-center gap-2 font-bold">
+				<div className="lg:col-span-3">
+					<p className="lg:flex lg:flex-row items-center gap-2 font-bold">
 						<span>
 							<svg
-								className="w-3 h-3 shrink-0"
+								className="w-3 h-3 shrink-0 max-lg:hidden"
 								xmlns="http://www.w3.org/2000/svg"
 								viewBox="0 0 640 640"
 							>
@@ -82,11 +82,13 @@ const BackgroundPage = () => {
 						</li>
 					</ul>
 				</div>
-				<div className="col-span-2">
+				{/** ONLY DISPLAY ON MEDIUM-SMALL SCREENS */}
+				<hr className="lg:hidden border-t border-gray-300" />{" "}
+				<div className="lg:col-span-2">
 					<p className="italic font-bold">2020 - 2022</p>
 					<p className="italic">Marryatville, SA (Australia)</p>
 				</div>
-				<div className="col-span-3">
+				<div className="lg:col-span-3">
 					<p className="font-bold mb-2">Marryatville High School</p>
 					<ul className="ml-5 space-y-0.5 list-disc">
 						<li>
@@ -100,7 +102,7 @@ const BackgroundPage = () => {
 			</div>
 
 			<h1>my latest dev stack</h1>
-			<div className="grid grid-cols-2 gap-8 font-inria-serif tracking-wide">
+			<div className="grid lg:grid-cols-2 md:grid-cols-1 gap-8 font-inria-serif tracking-wide">
 				<div>
 					<p className="card-list-header">Frontend</p>
 					<div className="card-list">
@@ -253,8 +255,10 @@ const BackgroundPage = () => {
 					</div>
 				</div>
 			</div>
-			<div className="w-fit h-fit py-3 px-5 inline-flex items-center gap-6 bg-white border border-black/10 font-inria-serif">
-				<p className="font-bold">Legend</p>
+			<div className="w-fit h-fit py-3 px-5 inline-flex flex-wrap items-center gap-6 bg-white border border-black/10 font-inria-serif">
+				<p className="font-bold max-md:text-center max-md:basis-full">
+					Legend
+				</p>
 				<div className="flex flex-row items-center gap-2">
 					<div className="w-4 h-4 bg-red-400"></div>
 					<p>Initiate</p>

@@ -201,6 +201,29 @@
 		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#FFFFFF", endColorstr="#FFFFF5", GradientType=0);
 		background-attachment: local;
 	}
+	.app-bg-gradient-sb {
+		background: #ffffff;
+		background: -webkit-linear-gradient(
+			27deg,
+			rgba(255, 255, 255, 1) 0%,
+			rgba(255, 248, 248, 1) 58%,
+			rgba(255, 255, 245, 1) 82%
+		);
+		background: -moz-linear-gradient(
+			27deg,
+			rgba(255, 255, 255, 1) 0%,
+			rgba(255, 248, 248, 1) 58%,
+			rgba(255, 255, 245, 1) 82%
+		);
+		background: linear-gradient(
+			27deg,
+			rgba(255, 255, 255, 1) 0%,
+			rgba(255, 248, 248, 1) 58%,
+			rgba(255, 255, 245, 1) 82%
+		);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#FFFFFF", endColorstr="#FFFFF5", GradientType=0);
+		background-attachment: local;
+	}
 
 	.card-list {
 		@apply w-full flex flex-wrap gap-5 justify-baseline mt-5 text-center;
@@ -209,10 +232,10 @@
 		@apply h-fit flex flex-col gap-2 items-center p-5 bg-white border border-black/10 duration-100;
 	}
 	.card-list > .card {
-		@apply w-[20%];
+		@apply lg:w-[20%] md:w-[31%] sm:w-[30%] max-sm:w-[30%];
 	}
 	.card > svg.card-icon {
-		@apply w-20 h-20 shrink-0;
+		@apply lg:w-20 lg:h-20 md:w-15 md:h-15 sm:w-10 sm:h-10 shrink-0;
 	}
 	p.card-list-header {
 		@apply font-bold text-xl;
@@ -244,7 +267,7 @@
 	}
 
 	.project {
-		@apply w-100 h-120 flex flex-col gap-2 border border-black/10 bg-white duration-150 hover:border-black/40 hover:shadow-md hover:-translate-y-2;
+		@apply lg:w-100 lg:h-120 md:w-90 md:h-110 flex flex-col gap-2 border border-black/10 bg-white duration-150 hover:border-black/40 hover:shadow-md hover:-translate-y-2;
 	}
 	.project:has(.project-date),
 	.project:has(.project-source-code) {
@@ -299,7 +322,7 @@
 }
 
 .fade-in {
-	animation: fadeIn 0.15s ease-in forwards;
+	animation: fadeIn 0.25s ease-in forwards;
 }
 
 @keyframes fadeIn {
@@ -307,6 +330,21 @@
 		opacity: 0;
 	}
 	to {
+		opacity: 1;
+	}
+}
+
+.slide-in {
+	animation: slideInRight 0.25s ease-out forwards;
+}
+
+@keyframes slideInRight {
+	from {
+		transform: translateX(100%);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0);
 		opacity: 1;
 	}
 }
