@@ -7,7 +7,7 @@ const ProjectsPage = () => {
 	return (
 		<section
 			id="projectsPage"
-			className="w-full h-max min-h-screen app-bg-gradient-pj flex flex-col gap-15 p-10"
+			className="w-full h-full min-h-screen app-bg-gradient-pj flex flex-col gap-15 p-10"
 		>
 			<h1>my projects</h1>
 			<div className="flex flex-row flex-wrap items-center justify-center gap-5 font-inria-serif tracking-wide">

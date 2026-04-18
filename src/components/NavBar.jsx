@@ -29,17 +29,19 @@ const NavBar = ({ setContactPopupShown }) => {
 
 	useEffect(() => {
 		const sections = document.querySelectorAll("section[id]");
+		const options = {
+			root: null,
+			rootMargin: "-50% 0px -50% 0px",
+			threshold: 0,
+		};
 
-		const observer = new IntersectionObserver(
-			(entries) => {
-				entries.forEach((entry) => {
-					if (entry.isIntersecting) {
-						setActiveSection(entry.target.id);
-					}
-				});
-			},
-			{ threshold: 0.13 },
-		);
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					setActiveSection(entry.target.id);
+				}
+			});
+		}, options);
 
 		sections.forEach((section) => observer.observe(section));
 
