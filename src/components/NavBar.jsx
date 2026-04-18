@@ -38,7 +38,7 @@ const NavBar = ({ setContactPopupShown }) => {
 					}
 				});
 			},
-			{ threshold: 0.3 },
+			{ threshold: 0.13 },
 		);
 
 		sections.forEach((section) => observer.observe(section));
