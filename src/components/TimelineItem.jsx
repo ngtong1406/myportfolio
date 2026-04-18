@@ -12,7 +12,7 @@ const TimelineItem = ({
 	console.log(listItemsMap);
 
 	return (
-		<div className="flex gap-x-5 font-inria-serif">
+		<div id="bgFadeIn" className="opacity-0 flex gap-x-5 font-inria-serif">
 			<div className="max-sm:hidden relative flex flex-col items-center">
 				<div
 					className={

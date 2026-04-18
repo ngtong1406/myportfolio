@@ -1,18 +1,46 @@
-import React from "react";
+import React, { useEffect } from "react";
 import project1Photo from "../assets/photos/mission_planner.jpg";
 import project2Photo from "../assets/photos/sapol_logo.svg";
 import project3Photo from "../assets/photos/Big_Things_Postcard.jpg";
 
 const ProjectsPage = () => {
+	useEffect(() => {
+		const fadeInItems = document.querySelectorAll("#pjFadeIn");
+		const slideBottomItems = document.querySelectorAll("#pjItemFadeIn");
+
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						if (entry.target.id === "pjFadeIn") {
+							entry.target.classList.add("fade-in-top");
+						}
+						if (entry.target.id === "pjItemFadeIn") {
+							entry.target.classList.add("slide-left");
+						}
+					}
+				});
+			},
+			{ threshold: 0.9 },
+		);
+
+		fadeInItems.forEach((item) => observer.observe(item));
+		slideBottomItems.forEach((item) => observer.observe(item));
+
+		return () => observer.disconnect();
+	}, []);
+
 	return (
 		<section
 			id="projectsPage"
 			className="w-full h-fit min-h-screen app-bg-gradient-pj flex flex-col gap-15 p-10"
 		>
-			<h1>my projects</h1>
+			<h1 id="pjFadeIn" className="opacity-0">
+				my projects
+			</h1>
 			<div className="flex flex-row flex-wrap items-center justify-center gap-5 font-inria-serif tracking-wide">
 				{/** PROJECT 1 */}
-				<div className="project">
+				<div id="pjItemFadeIn" className="opacity-0 project">
 					<div className="project-img">
 						<img
 							src={project1Photo}
@@ -60,7 +88,7 @@ const ProjectsPage = () => {
 				</div>
 
 				{/** PROJECT 2 */}
-				<div className="project">
+				<div id="pjItemFadeIn" className="opacity-0 project">
 					<div className="project-img">
 						<img
 							src={project2Photo}
@@ -107,7 +135,7 @@ const ProjectsPage = () => {
 				</div>
 
 				{/** PROJECT 3 */}
-				<div className="project">
+				<div id="pjItemFadeIn" className="opacity-0 project">
 					<div className="project-img">
 						<img
 							src={project3Photo}
@@ -143,7 +171,7 @@ const ProjectsPage = () => {
 				</div>
 			</div>
 
-			<div className="h-fit flex justify-center">
+			<div id="pjFadeIn" className="opacity-0 h-fit flex justify-center">
 				<a
 					className="w-fit flex flex-row items-center justify-center gap-2 font-inria-serif duration-100 max-md:underline max-md:underline-offset-3 hover:underline hover:underline-offset-3 active:text-[0.9rem]"
 					href="https://github.com/ngtong1406"

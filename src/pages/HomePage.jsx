@@ -17,6 +17,32 @@ const HomePage = () => {
 		};
 	}, []);
 
+	useEffect(() => {
+		const fadeInItems = document.querySelectorAll("#homeFadeIn");
+		const slideTopItems = document.querySelectorAll("#buttonFadeIn");
+
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						if (entry.target.id === "homeFadeIn") {
+							entry.target.classList.add("fade-in-slow");
+						}
+						if (entry.target.id === "buttonFadeIn") {
+							entry.target.classList.add("slide-top");
+						}
+					}
+				});
+			},
+			{ threshold: 1 },
+		);
+
+		fadeInItems.forEach((item) => observer.observe(item));
+		slideTopItems.forEach((item) => observer.observe(item));
+
+		return () => observer.disconnect();
+	}, []);
+
 	return (
 		<>
 			<section
@@ -24,18 +50,24 @@ const HomePage = () => {
 				className="w-full h-dvh min-h-screen flex flex-col items-center justify-center space-y-8"
 			>
 				<img
+					id="homeFadeIn"
 					src={tobyPhoto}
 					alt="Toby's portfolio photo"
-					className="w-55 h-55 rounded-full object-cover object-[25%_50%] border border-black select-none"
+					className="opacity-0 w-55 h-55 rounded-full object-cover object-[25%_50%] border border-black select-none"
 					draggable={false}
 				/>
 				<div className="w-max h-auto flex flex-col items-center gap-2">
-					<p className="welcome-text">Hi there! Welcome to...</p>
-					<h1>toby tran's portfolio</h1>
+					<p id="homeFadeIn" className="welcome-text opacity-0">
+						Hi there! Welcome to...
+					</p>
+					<h1 id="homeFadeIn" className="opacity-0 ">
+						toby tran's portfolio
+					</h1>
 				</div>
 				<div className="w-max h-auto flex flex-row items-center justify-evenly gap-2 text-[1rem]">
 					<a
-						className="inline-flex items-center gap-2 text-white py-1.5 px-5 bg-black border border-transparent hover:bg-gray-700 hover:underline hover:underline-offset-2 duration-50"
+						id="buttonFadeIn"
+						className="opacity-0 inline-flex items-center gap-2 text-white py-1.5 px-5 bg-black border border-transparent hover:bg-gray-700 hover:underline hover:underline-offset-2 duration-50"
 						href="https://www.linkedin.com/in/tobytran/"
 						target="_blank"
 						draggable={false}
@@ -56,7 +88,8 @@ const HomePage = () => {
 						</svg>
 					</a>
 					<a
-						className="inline-flex items-center gap-2 text-black py-1.5 px-5 border border-black hover:text-white hover:bg-black hover:border-transparent hover:underline hover:underline-offset-2 duration-50"
+						id="buttonFadeIn"
+						className="opacity-0 inline-flex items-center gap-2 text-black py-1.5 px-5 border border-black hover:text-white hover:bg-black hover:border-transparent hover:underline hover:underline-offset-2 duration-50"
 						href={tobyResume}
 						download={"Nguyen_Tong_Tran_Resume.pdf"}
 						draggable={false}

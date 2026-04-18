@@ -56,7 +56,12 @@ const NavBar = ({ setContactPopupShown }) => {
 					` ${isScrolled ? "border-black/10 shadow-2xl/5" : "border-transparent"}`
 				}
 			>
-				<p className="branding-logo">TOBY.</p>
+				<a
+					className="branding-logo duration-100 active:scale-95"
+					href="#homePage"
+				>
+					TOBY.
+				</a>
 				<ul className="max-md:hidden h-full flex justify-evenly gap-x-14 text-[1rem] items-center text-center tracking-wide text-black/50">
 					<li
 						className={

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import resume from "../assets/files/Nguyen_Tong_Tran_Resume.pdf";
 
 const ResumePage = () => {
@@ -15,13 +15,37 @@ const ResumePage = () => {
 		setIsRevealed((isRevealed) => !isRevealed);
 	};
 
+	useEffect(() => {
+		const fadeInItems = document.querySelectorAll("#rmFadeIn");
+
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add("fade-in-top");
+					}
+				});
+			},
+			{ threshold: 0.9 },
+		);
+
+		fadeInItems.forEach((item) => observer.observe(item));
+
+		return () => observer.disconnect();
+	}, []);
+
 	return (
 		<section
 			id="resumePage"
 			className="w-full h-max app-bg-gradient-rm flex flex-col gap-15 p-10"
 		>
-			<h1>my resumé</h1>
-			<div className="flex flex-wrap items-center justify-center gap-3 max-sm:space-y-4 font-inria-serif">
+			<h1 id="rmFadeIn" className="opacity-0">
+				my resumé
+			</h1>
+			<div
+				id="rmFadeIn"
+				className="opacity-0 flex flex-wrap items-center justify-center gap-3 max-sm:space-y-4 font-inria-serif"
+			>
 				<div className="bg-white border border-black py-1.5 px-5">
 					<div className="flex flex-row gap-2 items-center">
 						<svg
