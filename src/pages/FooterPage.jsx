@@ -4,9 +4,9 @@ const FooterPage = () => {
 	return (
 		<section
 			id="resumePage"
-			className="w-full h-max app-bg-gradient-ft flex flex-col items-center gap-1 pt-10 px-10 text-center"
+			className="w-full h-max app-bg-gradient-ft flex flex-col gap-1 pt-10 px-10 text-center"
 		>
-			<span>
+			<span className="w-full flex items-center justify-center">
 				<svg
 					id="svg"
 					className="w-30 h-30"
