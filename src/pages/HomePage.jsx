@@ -21,7 +21,7 @@ const HomePage = () => {
 		<>
 			<section
 				id="homePage"
-				className="w-full h-full min-h-screen flex flex-col items-center justify-center space-y-8"
+				className="w-full h-dvh min-h-screen flex flex-col items-center justify-center space-y-8"
 			>
 				<img
 					src={tobyPhoto}
