@@ -3,7 +3,11 @@ import resume from "../assets/files/Nguyen_Tong_Tran_Resume.pdf";
 
 const ResumePage = () => {
 	var resumeFileName = resume.split("/").pop();
-	resumeFileName = resumeFileName.substring(0, resumeFileName.indexOf("?"));
+	const queryIndex = resumeFileName.indexOf("?");
+	resumeFileName =
+		queryIndex >= 0
+			? resumeFileName.substring(0, queryIndex)
+			: resumeFileName;
 
 	const [isRevealed, setIsRevealed] = useState(false);
 
