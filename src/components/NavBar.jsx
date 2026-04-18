@@ -50,7 +50,7 @@ const NavBar = ({ setContactPopupShown }) => {
 		<>
 			<nav
 				className={
-					`fixed top-0 w-full h-25 z-50 flex justify-between px-20 items-center backdrop-blur-2xl duration-100 border-b` +
+					`fixed top-0 w-full h-25 z-50 flex justify-between px-10 items-center backdrop-blur-2xl duration-100 border-b` +
 					` ${isScrolled ? "border-black/10 shadow-2xl/5" : "border-transparent"}`
 				}
 			>

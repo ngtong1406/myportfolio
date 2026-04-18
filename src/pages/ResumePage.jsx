@@ -18,7 +18,7 @@ const ResumePage = () => {
 	return (
 		<section
 			id="resumePage"
-			className="w-full h-max app-bg-gradient-rm flex flex-col gap-15 p-20"
+			className="w-full h-max app-bg-gradient-rm flex flex-col gap-15 p-10"
 		>
 			<h1>my resumé</h1>
 			<div className="flex flex-wrap items-center justify-center gap-3 max-sm:space-y-4 font-inria-serif">

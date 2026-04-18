@@ -4,7 +4,7 @@ const BackgroundPage = () => {
 	return (
 		<section
 			id="backgroundPage"
-			className="w-full h-max min-h-screen app-bg-gradient-rv flex flex-col gap-15 p-20"
+			className="w-full h-max min-h-screen app-bg-gradient-rv flex flex-col gap-15 p-10"
 		>
 			<h1>about me</h1>
 			<div className="grid lg:grid-cols-5 md:grid-cols-1 gap-5 font-inria-serif tracking-wide">
@@ -103,7 +103,7 @@ const BackgroundPage = () => {
 
 			<h1>my latest dev stack</h1>
 			<div className="grid lg:grid-cols-2 md:grid-cols-1 gap-8 font-inria-serif tracking-wide">
-				<div>
+				<div className="grow">
 					<p className="card-list-header">Frontend</p>
 					<div className="card-list">
 						<div className="card">
@@ -175,7 +175,7 @@ const BackgroundPage = () => {
 					</div>
 				</div>
 
-				<div>
+				<div className="grow">
 					<p className="card-list-header">Backend</p>
 					<div className="card-list">
 						<div className="card">
@@ -225,7 +225,7 @@ const BackgroundPage = () => {
 					</div>
 				</div>
 
-				<div>
+				<div className="grow">
 					<p className="card-list-header">Database</p>
 					<div className="card-list">
 						<div className="card">

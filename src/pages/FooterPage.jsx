@@ -4,7 +4,7 @@ const FooterPage = () => {
 	return (
 		<section
 			id="resumePage"
-			className="w-full h-max app-bg-gradient-ft flex flex-col gap-1 pt-20 px-20 text-center"
+			className="w-full h-max app-bg-gradient-ft flex flex-col gap-1 pt-10 px-10 text-center"
 		>
 			<p className="branding-logo">TOBY.</p>
 			<div className="inline-flex flex-wrap items-center justify-center gap-5 font-inria-serif">
