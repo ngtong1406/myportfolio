@@ -226,13 +226,13 @@
 	}
 
 	.card-list {
-		@apply w-full flex flex-wrap gap-5 justify-baseline mt-5 text-center;
+		@apply w-full flex flex-wrap gap-5 max-sm:gap-3 justify-baseline mt-5 text-center;
 	}
 	.card {
 		@apply h-fit flex flex-col gap-2 items-center p-5 bg-white border border-black/10 duration-100;
 	}
 	.card-list > .card {
-		@apply lg:w-[20%] md:w-[31%] sm:w-[30%] max-sm:w-[29%] max-sm:grow;
+		@apply lg:w-[20%] md:w-[31%] sm:w-[30%] max-sm:w-[29%] max-sm:text-[0.9rem];
 	}
 	.card > svg.card-icon {
 		@apply lg:w-20 lg:h-20 md:w-15 md:h-15 sm:w-10 sm:h-10 shrink-0;
