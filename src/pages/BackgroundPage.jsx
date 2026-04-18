@@ -1,6 +1,20 @@
 import React from "react";
+import TimelineItem from "../components/TimelineItem";
 
 const BackgroundPage = () => {
+	const educationEvents = [
+		{
+			GPA: "6.17 / 7.00",
+			"Honours & Awards": "2023-25 University Merit Awards",
+			"Relevant Coursework":
+				"Data Structures Essentials, Object-Oriented Programming (OOP), Design Patterns with C++, Data-Driven Web Technologies, Web Technology, System Requirements and User Experience, Agile Development and Governance, Operating Systems and Tool Chains.",
+		},
+		{
+			ATAR: "90.00 / 99.95",
+			"Honours & Awards": "2022 SACE Merit Award",
+		},
+	];
+
 	return (
 		<section
 			id="backgroundPage"
@@ -9,96 +23,57 @@ const BackgroundPage = () => {
 			<h1>about me</h1>
 			<div className="grid lg:grid-cols-5 md:grid-cols-1 gap-5 font-inria-serif tracking-wide">
 				<div className="lg:col-span-2 font-bold">
-					<p>Full-Stack Software Developer</p>
+					<p className="italic">Full-Stack Software Developer</p>
 					<p>Building clean & scalable software solutions.</p>
 				</div>
-				<div className="lg:col-span-3">
+				<div className="lg:col-span-3 lg:pl-3">
 					<p className="mb-5">
 						My real name is{" "}
 						<span className="italic font-bold">
 							Nguyen Tong Tran
 						</span>{" "}
-						but I usually go for{" "}
+						but I usually go by{" "}
 						<span className="italic font-bold">Toby Tran</span>{" "}
 						since it’s easier for everyone. I’m an IT graduate from
 						the <i>University of South Australia</i>{" "}
 						(UniSA/AdelaideUni) with <b>a GPA of 6.17 / 7.00</b>,
-						specialising in software development. I’m currently
+						specialising in Software Development. I’m currently
 						based in <b>Adelaide, SA</b>, and am actively looking
-						for opportunities to take part in real-world projects.
+						for opportunities to contribute to real-world projects.
 					</p>
 					<p>
 						I take great pride in building solutions that are not
-						only functional but are also supported by clean, robust
-						architecture. My serious commitment to applying best
-						practices via SOLID principles and System Design to
-						ensure scalability and prevent technical debts
-						contributes to timely, high-quality deliverables.
+						only functional but are also underpinned by clean,
+						robust architecture. My serious commitment to applying
+						best practices through SOLID Principles and System
+						Design ensures scalability, prevents technical debts,
+						and contributes to timely, high-quality deliverables.
 					</p>
 				</div>
 			</div>
 
 			<h1>my education</h1>
-			<div className="grid lg:grid-cols-5 md:grid-cols-1 gap-8 font-inria-serif tracking-wide">
-				<div className="lg:col-span-2">
-					<p className="italic font-bold">Mar. 2023 - Nov. 2025</p>
-					<p className="italic">Mawson Lakes, SA (Australia)</p>
-				</div>
-				<div className="lg:col-span-3">
-					<p className="lg:flex lg:flex-row items-center gap-2 font-bold">
-						<span>
-							<svg
-								className="w-3 h-3 shrink-0 max-lg:hidden"
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 640 640"
-							>
-								<path d="M341.5 45.1C337.4 37.1 329.1 32 320.1 32C311.1 32 302.8 37.1 298.7 45.1L225.1 189.3L65.2 214.7C56.3 216.1 48.9 222.4 46.1 231C43.3 239.6 45.6 249 51.9 255.4L166.3 369.9L141.1 529.8C139.7 538.7 143.4 547.7 150.7 553C158 558.3 167.6 559.1 175.7 555L320.1 481.6L464.4 555C472.4 559.1 482.1 558.3 489.4 553C496.7 547.7 500.4 538.8 499 529.8L473.7 369.9L588.1 255.4C594.5 249 596.7 239.6 593.9 231C591.1 222.4 583.8 216.1 574.8 214.7L415 189.3L341.5 45.1z" />
-							</svg>
-						</span>
-						University of South Australia (UniSA, now AdelaideUni)
-					</p>
-					<p className="italic mb-2">
-						Bachelor of Information Technology (Software
-						Development)
-					</p>
-					<ul className="ml-5 space-y-0.5 list-disc">
-						<li>
-							<b>GPA:</b> 6.17 / 7.00
-						</li>
-						<li>
-							<b>Honours & Awards:</b> 2023-25 University Merit
-							Awards
-						</li>
-						<li>
-							<b>Relevant Coursework:</b>{" "}
-							<i>
-								Data Structures Essentials, Object-Oriented
-								Programming (OOP), Design Patterns with C++,
-								Data-Driven Web Technologies, Web Technology,
-								System Requirements and User Experience, Agile
-								Development and Governance, Operating Systems
-								and Tool Chains.
-							</i>
-						</li>
-					</ul>
-				</div>
-				{/** ONLY DISPLAY ON MEDIUM-SMALL SCREENS */}
-				<hr className="lg:hidden border-t border-gray-300" />{" "}
-				<div className="lg:col-span-2">
-					<p className="italic font-bold">2020 - 2022</p>
-					<p className="italic">Marryatville, SA (Australia)</p>
-				</div>
-				<div className="lg:col-span-3">
-					<p className="font-bold mb-2">Marryatville High School</p>
-					<ul className="ml-5 space-y-0.5 list-disc">
-						<li>
-							<b>ATAR:</b> 90.00 / 99.95
-						</li>
-						<li>
-							<b>Honours & Awards:</b> 2022 SACE Merit Award
-						</li>
-					</ul>
-				</div>
+			<div>
+				<TimelineItem
+					date={"Mar. 2023 - Nov. 2025"}
+					location={"Mawson Lakes, SA"}
+					title={
+						"University of South Australia (UniSA, now AdelaideUni)"
+					}
+					subtitle={
+						"Bachelor of Information Technology (Software Development)"
+					}
+					listItems={educationEvents[0]}
+					isLast={false}
+				/>
+
+				<TimelineItem
+					date={"2020 - 2022"}
+					location={"Marryatville, SA"}
+					title={"Marryatville High School"}
+					listItems={educationEvents[1]}
+					isLast={true}
+				/>
 			</div>
 
 			<h1>my latest dev stack</h1>
