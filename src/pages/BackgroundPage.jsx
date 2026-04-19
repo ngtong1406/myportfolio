@@ -65,13 +65,13 @@ const BackgroundPage = () => {
 							Nguyen Tong Tran
 						</span>{" "}
 						but I usually go by{" "}
-						<span className="italic font-bold">Toby Tran</span>{" "}
-						since it’s easier for everyone. I’m an IT graduate from
-						the <i>University of South Australia</i>{" "}
-						(UniSA/AdelaideUni) with <b>a GPA of 6.17 / 7.00</b>,
-						specialising in Software Development. I’m currently
-						based in <b>Adelaide, SA</b>, and am actively looking
-						for opportunities to contribute to real-world projects.
+						<span className="italic font-bold">Toby Tran</span> as
+						it’s easier for everyone. I’m an IT graduate from the{" "}
+						<i>University of South Australia</i> (UniSA/AdelaideUni)
+						with <b>a GPA of 6.17 / 7.00</b>, specialising in
+						Software Development. Currently based in Adelaide, SA, I
+						am seeking opportunities to contribute to real-world
+						projects.
 					</p>
 					<p>
 						I take great pride in building solutions that are not
