@@ -69,9 +69,9 @@ const BackgroundPage = () => {
 						it’s easier for everyone. I’m an IT graduate from the{" "}
 						<i>University of South Australia</i> (UniSA/AdelaideUni)
 						with <b>a GPA of 6.17 / 7.00</b>, specialising in
-						Software Development. Currently based in Adelaide, SA, I
-						am seeking opportunities to contribute to real-world
-						projects.
+						Software Development. Currently based in{" "}
+						<b>Adelaide, SA</b>, I am seeking opportunities to
+						contribute to real-world projects.
 					</p>
 					<p>
 						I take great pride in building solutions that are not
