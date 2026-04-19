@@ -1,5 +1,5 @@
 import tobyPhoto from "../assets/photos/IMG_3523.JPG";
-import tobyResume from "../assets/files/Nguyen_Tong_Tran_Resume.pdf";
+import tobyResume from "../assets/files/Resume_Toby_Tran_Software_Developer.pdf";
 import { useEffect, useState } from "react";
 
 const HomePage = () => {

@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
-import resume from "../assets/files/Nguyen_Tong_Tran_Resume.pdf";
+import resume from "../assets/files/Resume_Toby_Tran_Software_Developer.pdf";
 
 const ResumePage = () => {
 	var resumeFileName = resume.split("/").pop();
-	const queryIndex = resumeFileName.indexOf("?");
+	const lastWordIndex = resumeFileName.indexOf("Developer") + 9; // "Developer" = 9 characters - skip 9 index
+	const fileFormatIndex = resumeFileName.indexOf(".pdf");
 	resumeFileName =
-		queryIndex >= 0
-			? resumeFileName.substring(0, queryIndex)
+		lastWordIndex > 0 && fileFormatIndex > 0
+			? resumeFileName.substring(0, lastWordIndex) +
+				resumeFileName.substring(fileFormatIndex, fileFormatIndex + 4) // stop after the next 4 index.
 			: resumeFileName;
 
 	const [isRevealed, setIsRevealed] = useState(false);
@@ -58,7 +60,7 @@ const ResumePage = () => {
 						<a
 							className="underline underline-offset-3 hover:text-gray-600"
 							href={resume}
-							download={"Nguyen_Tong_Tran_Resume.pdf"}
+							download={"Resume_Toby_Tran_Software_Developer.pdf"}
 						>
 							{resumeFileName}
 						</a>
