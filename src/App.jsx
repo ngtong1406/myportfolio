@@ -15,7 +15,7 @@ const App = () => {
         <div className="min-h-screen mx-30">
             <Navbar />
 
-            <main className="mx-auto max-w-6xl px-6 md:px-12 border-x border-border-subtle">
+            <main>
                 <LandingSection />
                 <EducationSection />
                 <ProjectsSection onSelectProject={setSelectedProject} />
@@ -29,15 +29,6 @@ const App = () => {
                 project={selectedProject}
                 onClose={() => setSelectedProject(null)}
             />
-
-            <div className="h-50">hello</div>
-            <div className="h-50">hello</div>
-            <div className="h-50">hello</div>
-            <div className="h-50">hello</div>
-            <div className="h-50">hello</div>
-            <div className="h-50">hello</div>
-            <div className="h-50">hello</div>
-            <div className="h-50">hello</div>
         </div>
     );
 };

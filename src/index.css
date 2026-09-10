@@ -55,12 +55,18 @@
 }
 
 @layer components {
-    .section-heading::before {
+    h1.section-heading::before {
         content: "# ";
         @apply text-white text-xl font-bold;
     }
+    h1.section-heading {
+        @apply text-white text-xl font-bold;
+    }
     hr.section-break {
-        @apply w-full bg-border-main border-0;
+        @apply w-full h-px bg-border-main border-0 mt-2.5 mb-4;
+    }
+    .section-text p {
+        @apply mt-4 text-justify;
     }
 
     .nav-container {
