@@ -29,7 +29,7 @@ const Navbar = () => {
         const timerId = setInterval(updateClock, 1000);
 
         return () => clearInterval(timerId);
-    });
+    }, []);
 
     return (
         <div className="w-full py-10 sticky top-0 bg-primary">

@@ -5,8 +5,21 @@ import AtIcon from "../assets/icons/at.svg?react";
 import LinkedInIcon from "../assets/icons/linkedin.svg?react";
 import GitHubIcon from "../assets/icons/github.svg?react";
 import InstagramIcon from "../assets/icons/instagram.svg?react";
+import { useState } from "react";
 
 const LandingSection = () => {
+    const TOBY_BIRTH_YEAR = 2004;
+    const [age, setAge] = useState("");
+
+    useState(() => {
+        const updateAge = () => {
+            const currentYear = new Date().getFullYear();
+            setAge(currentYear - TOBY_BIRTH_YEAR);
+        };
+
+        updateAge();
+    }, []);
+
     return (
         <div className="w-full mt-5 grid grid-cols-7 gap-17">
             <div className="col-span-4 flex flex-col justify-between">
@@ -62,7 +75,7 @@ const LandingSection = () => {
                 </div>
                 <div className="flex flex-col items-end">
                     <div className="text-2xl">
-                        GRAD. SOFTWARE DEV // 22 YEARS OLD
+                        GRAD. SOFTWARE DEV // {age} YEARS OLD
                     </div>
                     <a
                         href="https://www.instagram.com/knchrls/"
