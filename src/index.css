@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url("/public/fonts/JetBrains_Mono/JetBrainsMono-VariableFont_wght.ttf")
+        format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Playfair Display";
+    src: url("/public/fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf")
+        format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@theme {
+    /* override the default tailwind's mono font */
+    --font-mono: "JetBrains Mono", monospace;
+    --font-jetbrains: "JetBrains Mono", monospace;
+
+    /* same as above */
+    --font-serif: "Playfair Display", serif;
+    --font-playfair: "Playfair Display", serif;
+
+    --color-primary: #191919;
+    --color-secondary: #b4b4b4;
+    --color-white: #ffffff;
+    --color-border-main: #313131;
+    --color-border-sub: #1d1d1d;
+    --color-border-subbody: #161616;
+    --color-date-gray: #585858;
+    --color-tag: #121212;
+    --color-accent: #f17e14;
+}
+
+@layer base {
+    :root {
+        @apply scheme-dark;
+    }
+
+    ::selection {
+        @apply bg-accent text-white;
+    }
+
+    body {
+        @apply bg-primary text-secondary font-mono overflow-x-hidden;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
