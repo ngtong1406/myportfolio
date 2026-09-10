@@ -62,4 +62,17 @@
     hr.section-break {
         @apply w-full bg-border-main border-0;
     }
+
+    .nav-container {
+        @apply w-full pt-20 pb-10 sticky top-0 backdrop-blur-3xl;
+    }
+    .nav-list {
+        @apply flex items-center justify-around gap-8;
+    }
+    .nav-list li.nav-list-item {
+        @apply hover:text-white hover:underline hover:underline-offset-4;
+    }
+    li.nav-list-item > a {
+        @apply active:text-white;
+    }
 }
