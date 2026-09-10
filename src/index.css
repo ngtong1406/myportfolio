@@ -48,8 +48,18 @@
     }
 
     body {
-        @apply bg-primary text-secondary font-mono overflow-x-hidden;
+        @apply bg-primary text-secondary text-[1rem] font-mono overflow-x-hidden;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+@layer components {
+    .section-heading::before {
+        content: "# ";
+        @apply text-white text-xl font-bold;
+    }
+    hr.section-break {
+        @apply w-full bg-border-main border-0;
     }
 }
