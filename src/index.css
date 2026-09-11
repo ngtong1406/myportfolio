@@ -82,4 +82,8 @@
     li.nav-list-item > a {
         @apply active:text-white;
     }
+
+    .edu-card-link {
+        @apply inline-flex items-center gap-2 text-secondary hover:underline hover:underline-offset-4 hover:text-white transition-colors;
+    }
 }
